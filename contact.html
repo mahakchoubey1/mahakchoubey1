@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="webdev.css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="webdev.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            body {
+                background-image: url("Entrepreneur\,\ Stylit\,\ Speaker.png");
+                min-height: 50rem;
+                opacity: 1;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+
+
+            #shero {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            #shero h1 {
+                text-align: center;
+                color: rgb(73, 239, 189);
+                text-shadow: -10px -10px 30px;
+            }
+
+            #shero h1:first-child {
+                margin-top: 50px;
+            }
+
+            button {
+                margin: 20px auto 20px auto;
+            }
+
+            #sher {
+                width: 100%;
+            }
+
+            #sher .sbox {
+                width: 90%;
+                height: 400px;
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            .sbox .left {
+                width: 50%;
+                margin: 40px 50px 20px 50px;
+                text-align: center;
+            }
+
+            .sbox .right {
+                margin: 60px 50px 20px 50px;
+                font-size: 47px;
+            }
+
+            .sbox .right .first {
+                text-align: left;
+
+                font-weight: bolder;
+
+            }
+
+            #map .s-box iframe {
+                margin-left: 30%;
+                margin-top: 50px;
+                width: 40%;
+                height: 400px;
+                margin-bottom: 40px;
+            }
+
+            ul li {
+                list-style: none;
+            }
+
+            .sfoot {
+                height: 40px;
+                background-color: antiquewhite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+            }
+
+            .sfoot i {
+                margin-left: 30px;
+                font-size: 40px;
+            }
+
+            .sfoot .fa-instagram:hover {
+                background: linear-gradient(#405de6, #5851d8, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80);
+
+            }
+
+            .sfoot .fa-facebook:hover {
+                background: #4267B2;
+
+            }
+
+            .sfoot .fa-twitter:hover {
+                background: #1DA1F2;
+
+            }
+
+            .sfoot .fa-linkedin:hover {
+                background: #00A0DC;
+
+            }
+
+            .sfoot .fa-youtube:hover {
+                background: #e70808;
+
+            }
+
+
+            #overlay {
+                text-align: center;
+                height: 38%;
+                width: 25%;
+                position: absolute;
+                top: 20%;
+                left: 35%;
+                box-sizing: border-box;
+                background-size: cover;
+                background-color: #08a26a;
+                box-shadow: -10px -10px 30px;
+                display: none;
+            }
+
+            #overlay a {
+                position: absolute;
+                left: 92%;
+                top: 0%;
+                margin: 3px 0px 0px 3px;
+            }
+
+
+
+            #overlay input {
+                outline: none;
+                border: 1px solid transparent;
+                display: block;
+                border-radius: 30px;
+                margin: 20px auto 0 auto;
+                height: 40px;
+                width: 80%;
+                font-size: 20px;
+                background-color: #f4f6f7;
+                padding: 10px;
+            }
+
+            #overlay textarea {
+                margin-top: 20px;
+                height: 100px;
+                width: 80%;
+                border: 1px solid transparent;
+                border-radius: 30px;
+                padding: 10px;
+                outline: none;
+            }
+
+            #overlay input:first-child {
+                margin-top: 40px;
+            }
+
+            #overlay button {
+                text-align: center;
+                font-size: 25px;
+                padding: 5px;
+                margin-bottom: 10px;
+                border: 1px solid transparent;
+                background-color: #afefa9;
+                border-radius: 50%;
+            }
+        </style>
+ 
+    </head>
+
+    <body>
+        <div id="c-body">
+            <section id="header">
+                <a href="#"><img src="" alt="" class="logo"></a>
+                <div>
+                    <ul id="navbar">
+
+                        <li>
+                            <a href="webdev.html">HOME</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html">SHOP</a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">BLOG</a>
+                        </li>
+
+                        <li>
+                            <a href="about.html">ABOUT</a>
+                        </li>
+
+                        <li>
+                            <a href="contact.html" class="active">CONTACT</a>
+                        </li>
+
+                        <li id="cart-shop">
+                            <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </li>
+                        <a href="#" id="close"><i class="far fa-times-circle" id="close"></i></a>
+                    </ul>
+                </div>
+                <div id="mobile">
+
+                    <a href="cart.html">
+                        <i class="fa-solid  fa-cart-shopping"></i>
+                    </a>
+
+                    <i id="bar" class="fas fa-outdent"></i>
+
+
+                </div>
+            </section>
+
+
+            <section id="shero">
+
+                <h1>want to know more ?</h1>
+                <h1>reach out to us!</h1>
+
+                <button class="normal" id="c-button">contact me</button>
+                <div class="line"></div>
+
+            </section>
+            <section id="sher">
+                <div class="sbox">
+                    <div class="left">
+                        <img src="" alt="">
+
+                        <h2>
+                            get started with this website and access credit opportunities
+                        </h2>
+                    </div>
+                    <div class="right">
+                        <ul class="first">
+                            <li>helpline no.</li>
+                            <li>feedback</li>
+                            <li>queries</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+
+            </section>
+            <section class="sfoot">
+                <i class=" fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-youtube"></i>
+            </section>
+            <section id="map">
+                <div class="s-box">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19461.723237426402!2d79.57177390188873!3d23.848165508923852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39821cda530496fd%3A0xd163fd4ca0c2da08!2sBandakpur%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1717075591286!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+
+            </section>
+        </div>
+        <div class="c-active" id="overlay">
+            <a href="#" id="wrong"><i class="fas fa-x"></i></a>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <h2>get in touch</h2>
+                <hr>
+                <input type="hidden" name="access_key" value="3a3db188-60e8-47df-982b-fa008ddca211">
+                <input type="text" name="first name" placeholder="first name" required>
+                <input type="text" name="last name" placeholder="last name" required>
+                <input type="tel" name="phone no" id="" placeholder="00000-00000" required>
+                <input type="email" name="email" id="" placeholder=" abc@gmail.com" required>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="message please"></textarea>
+                <br />
+                <button type="submit">submit</button>
+            </form>
+
+        </div>
+        <script src="webdev.js"></script>
+       
+    
+    </body>
+
+    </html>
+
+</body>
+
+</html>

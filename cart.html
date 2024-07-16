@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="webdev.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #cart-face table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            white-space: nowrap
+        }
+
+        #cart-face table thead {
+            border: 2px solid black;
+            border-right: none;
+            border-left: none;
+        }
+
+        /* #cart table th:nth-child(1){
+        width:100px;
+        text-align: center;
+    }
+    #cart table th:nth-child(2){
+        width:150px;
+        text-align: center;
+    }#cart table th:nth-child(3){
+        width:200px;
+        text-align: center;
+    }#cart table th:nth-child(4),#cart table th:nth-child(5),#cart table th:nth-child(6){
+        width:100px;
+        text-align: center;
+    }
+     */
+        #cart-face table tbody tr td {
+            padding-top: 20px;
+        }
+
+        #cart-face table td:nth-child(1) {
+            width: 213px;
+            text-align: center;
+        }
+
+        #cart-face table td:nth-child(2) {
+            width: 213px;
+            text-align: center;
+        }
+
+        #cart-face table td:nth-child(2) img {
+            width: 100px;
+        }
+
+        #cart-face table td:nth-child(3) {
+            width: 213px;
+            text-align: center;
+        }
+
+        #cart-face table td:nth-child(4),
+        #cart-face table td:nth-child(5),
+        #cart-face table td:nth-child(6) {
+            width: 213px;
+            text-align: center;
+        }
+
+        #cart-face table tbody tr td:nth-child(5) input {
+            width: 50px;
+            padding: 10px 5px 10px 15px;
+        }
+
+        #coupon {
+            margin-top: 40px;
+            font-size: 20px;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 90%;
+            grid-template-columns: 50% 50%;
+            padding: 20px;
+            height: 250px;
+        }
+
+
+
+        #coupon #coupon-left,
+        #coupon #coupon-right {
+            width: 90%;
+
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        #coupon #coupon-left h3,
+        #coupon #coupon-right h3 {
+            margin: -10px 0 10px 0;
+        }
+
+        #coupon #coupon-left {
+            margin-left: 70px;
+            margin-right: 25px;
+        }
+
+        #coupon #coupon-left input,
+        #coupon #coupon-left button {
+            height: 40px;
+            padding: 10px;
+        }
+
+        #coupon #coupon-left input {
+            width: 50%;
+        }
+
+        #coupon #coupon-left button,
+        #coupon #coupon-right button {
+            background-color: darkgreen;
+            height: 40px;
+            padding: 10px;
+        }
+
+        #coupon #coupon-right {
+            border: 1px solid rgb(210, 206, 206);
+            border-radius: 4px;
+        }
+
+        .total {
+            table-layout: fixed;
+            border: 1px solid rgb(210, 206, 206);
+            width: 80%;
+            margin: 0px auto 10px auto;
+            text-align: center;
+            border-collapse: collapse;
+            color: rgb(98, 98, 97)
+        }
+
+        th {
+            color: rgb(39, 38, 38);
+        }
+
+        .total tr td,
+        .total tr th {
+            border: 1px solid rgb(210, 206, 206);
+        }
+
+        @media (width:799px) {}
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <a href="webdev.html">HOME</a>
+                </li>
+                <li>
+                    <a href="shop.html">SHOP</a>
+                </li>
+                <li>
+                    <a href="blog.html">BLOG</a>
+                </li>
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+                <li>
+                    <a href="contact.html">CONTACT</a>
+                </li>
+                <li id="cart-shop">
+                    <a href="cart.html" class="active"><i class="fa-solid fa-cart-shopping"></i></a>
+                </li>
+                <a href="#" id="close"><i class="far fa-times-circle" id="close"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html">
+                <i class="fa-solid  fa-cart-shopping"></i>
+            </a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="shero">
+
+        <h1>Save to Shop Later</h1>
+        <h1></h1>
+        <div class="line"></div>
+
+    </section>
+    <section id="cart-face" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Remove</th>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shirt2.jpg" alt=""></td>
+                    <td>cartoon shirt1</td>
+                    <td>$250</td>
+                    <td><input type="number" name="quantity" id="" value="1"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shirt3.jpg" alt=""></td>
+                    <td>cartoon shirt1</td>
+                    <td>$250</td>
+                    <td><input type="number" name="quantity" id="" value="1"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shirt4.jpg" alt=""></td>
+                    <td>cartoon shirt1</td>
+                    <td>$250</td>
+                    <td><input type="number" name="quantity" id="" value="1"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="shirt4.jpg" alt=""></td>
+                    <td>cartoon shirt1</td>
+                    <td>$250</td>
+                    <td><input type="number" name="quantity" id="" value="1"></td>
+                    <td></td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+    <section id="coupon">
+        <div id="coupon-left">
+            <h3>Apply Coupon</h3>
+            <input type="text" name="coupon" id="" placeholder="Enter your coupon">
+            <button type="submit" name="coupon-btn">Apply</button>
+        </div>
+        <div id="coupon-right">
+            <h3>Cart Totals</h3>
+            <table class="total">
+                <tr>
+                    <td>Cart-Subtotal</td>
+                    <td>$400</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <th>Total</th>
+                    <th>$400</th>
+                </tr>
+            </table>
+            <button type="submit" name="payment">Proceed to Pay</button>
+        </div>
+    </section>
+    <section id="footer" class="section-p1" class="section-m1">
+        <div class="f-div ">
+            <img src="" alt="" srcset="">
+            <ul>
+                <li>
+                    <h4>contact</h4>
+                </li>
+                <pre>
+                            <li>Address: <span>a-601,chordia wonderhomes ,chordia city,kamala nehru nagar Jaipur(raj)</li>
+                            <li>phones:  <span>+08 6311 365/(+91)012345 6789</span></li>
+                            <li>hours:   <span>10:00-18:00 , mon-sat</span></li>
+                            </pre>
+            </ul>
+            <div class="followa">
+                <h4>folow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-pinterest"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="f-div">
+            <ul>
+                <li>
+                    <h4>About</h4>
+                </li>
+                <li>about us</li>
+                <li>delivery information</li>
+                <li>privacy policy</li>
+                <li>terms &condition</li>
+                <li>contact us</li>
+            </ul>
+        </div>
+        <div class="f-div">
+            <ul>
+                <li>
+                    <h4>my account</h4>
+                </li>
+                <li>sign in</li>
+                <li>view cart</li>
+                <li>my wishlist</li>
+                <li>track my order</li>
+                <li>help</li>
+            </ul>
+        </div>
+        <div class="f-div">
+            <ul>
+                <li>
+                    <h4>install apps</h4>
+                </li>
+                <li>from app store or google play</li>
+                <li><img src="" alt="" srcset="">
+                    <img src="" alt="" srcset="">
+                </li>
+
+                <li>secured payment gateways</li>
+                <li>
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <script src="webdev.js"></script>
+</body>
+
+</html>
