@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=4, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+    
+    }
+    
+    body{
+        width:300px;
+    
+       
+      
+       text-decoration:none;
+       outline:none;
+       scroll-behavior:smooth;
+       font-family:"poppins",sans-serif;
+    
+    }
+    
+    .popup-container{
+    width:400px;height:fit-content;
+    margin:10px auto 10px auto;
+    
+    }
+    
+    form{
+      width:400px;
+      margin:20px auto 10px auto;
+    height:fit-content;
+      border: 2px solid rgb(244, 165, 165);
+      fill-opacity: 10px;
+      border-radius:10px ;
+    
+    }
+    h2{
+    font-size: 20px;
+    text-align:left;
+    margin-top:20px;
+    margin-bottom:20px;
+    position:relative;
+    
+    }
+    
+    .btn1{
+        position:absolute;
+       font-size:20px;
+       width:20px;
+       border-radius:4px;
+       outline:none;
+       border: none;
+       margin-left:20%;
+    
+    }
+    
+    
+    .btn2{
+    background: #080d9c;
+        height:30px;
+        width:50px;
+        text-align: center;
+        margin:10px auto 10px auto;
+        margin-left:40%;
+        outline:none;
+        border:none;
+        color:white;
+    
+        border-radius: 5px;
+        
+        
+    
+    }
+    input{padding: 10px;;
+        margin:0 auto 0 auto;
+        margin-left:30px;
+    
+        width:330px;
+          height:35px;
+        background-color: antiquewhite;
+        outline:none;
+        border:none;
+        border-radius:5px;
+    }
+    
+    .inputfirst{
+        margin-top:10px;
+    
+    }
+    #studentFields{
+        margin-left:20px;
+    }
+    textarea{
+        
+        margin:0 auto 0 auto;
+        margin-left:30px;
+    
+        width:330px;
+          height:100px;
+        background-color: antiquewhite;
+        outline:none;
+        border:none;
+        border-radius:5px;padding: 10px;
+    
+    }
+    label {
+    
+        
+        margin:0 auto 0 auto;
+        margin-left:30px;
+        outline:none;
+        border:none;
+        border-radius:5px;padding: 10px;
+    }
+    
+    
+    span{
+        margin:0px auto 0 auto;
+        margin-left:30px;
+        margin-bottom:50px ;
+        outline:none;
+        border:none;
+        border-radius:5px;padding: 10px;
+    }
+    
+    .radio{
+        background-color: antiquewhite;
+        width:35px;
+        margin-top:20px;
+    
+    }
+    
+    
+    
+</style>
+    <link rel="stylesheet" href="p2.css">
+</head>
+<body>
+<div class="popup-container" id="lostFoundPopup">
+            <div class="popup">
+                <form method="POST" action="lost_and_found.php" enctype="multipart/form-data">
+                    <h2>
+                        <span>Lost and Found Form</span>
+                        <button class="btn1" type="reset" onclick="popup('lostFoundPopup')">X</button>
+                    </h2>
+                    <input class=.inputfirst type="text" placeholder="Full Name" name="name" required><br><br>
+                    <input type="email" placeholder="Email" name="email" required><br><br>
+                    <input type="text" placeholder="Phone" name="phone" required><br><br>
+
+                    <label>User Type:</label><br>
+                    <span>Student:</span><input type="radio"  class="radio"
+                    name="user_type" value="Student" onclick="showStudentFields()" required>
+                   <span> Faculty: </span><input type="radio" class="radio"
+                     name="user_type" value="Faculty" onclick="hideStudentFields()"><br><br>
+
+                    <div id="studentFields" style="display:none;">
+                        <label>Course:</label>
+                        <select name="course">
+                            <option value="BCA">BCA</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BCom">BCom</option>
+                        </select><br>
+
+                        <label>Year:</label>
+                        <select name="year">
+                            <option value="1st">1st</option>
+                            <option value="2nd">2nd</option>
+                            <option value="3rd">3rd</option>
+                        </select><br><br>
+                    </div>
+
+                    <div id="facultyFields" style="display:none;">
+                        <label>Department:</label>
+                        <select name="department">
+                            <option value="CSE">CSE</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="EEE">EEE</option>
+                        </select><br><br>
+                    </div>
+
+                    <input type="text" placeholder="Item Name" name="item_name" required><br><br>
+                    <input type="file" name="photo" required><br><br>
+                    <input type="text" placeholder="Where Item Was Found" name="location" required><br><br>
+                    <textarea name="additional_notes" placeholder="Additional Notes"></textarea><br>
+
+                    <button class="btn2" type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>
+<!-- Lost and Found Form Popup -->
