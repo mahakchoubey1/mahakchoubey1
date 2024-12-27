@@ -1,12 +1,3 @@
-- 👋 Hi, I’m @mahakchoubey1
-- 👀 I’m interested in web development/datascience 
-- 🌱 I’m currently learning frontend.
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: she/ her ...
-- ⚡ Fun fact: ...
+![Screenshot 2024-12-27 162053](https://github.com/user-attachments/assets/d8c76a3b-3237-4d46-8f21-1ee76be44f1a)
 
-<!---
-mahakchoubey1/mahakchoubey1 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+
